@@ -1,0 +1,21 @@
+<h1>Delete</h1>
+<form [formGroup]="awesomeForm" (ngSubmit)="deleteAwesome(id)">
+  <table>
+    <tr>
+      <td>Tag:</td>
+      <td><input type="text" formControlName="tag"></td>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td><input type="text" formControlName="url"></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><input type="text" formControlName="descriptions"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Xoá</button></td>
+    </tr>
+  </table>
+</form>

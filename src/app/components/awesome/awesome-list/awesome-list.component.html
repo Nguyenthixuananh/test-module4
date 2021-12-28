@@ -1,0 +1,31 @@
+<h2>My Awesome List</h2>
+<a routerLink="/awesome/create" class="btn btn-info btn-lg" role="button" aria-pressed="true">Add new</a>
+
+
+<table class="table table-striped">
+  <thead>
+  <caption>List of awesome</caption>
+  <tr class="table-active">
+    <th scope="col">Tag</th>
+    <th scope="col">URL</th>
+    <th scope="col">Description</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr  *ngFor="let awesome of awesomes; index as i">
+    <td>{{awesome.tag}}</td>
+    <td>{{awesome.url}}</td>
+    <td>{{awesome.descriptions}}</td>
+    <td>
+      <a [routerLink]="['/awesome/update',awesome.id]" class="btn btn-warning btn-lg" role="button" aria-pressed="true">Edit</a>
+    </td>
+    <td>
+<!--      <a (click)="delete(i)" class="btn btn-danger btn-lg" role="button" aria-pressed="true">Delete</a>-->
+      <button onclick="return confirm('Are u sure????')" (click)="delete(i)" class="btn btn-danger btn-lg">Delete</button>
+    </td>
+
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<h1>Cập nhật thông tin sản phẩm</h1>
+<form [formGroup]="awesomeForm" (ngSubmit)="updateAwesome(id)">
+  <table  class="table table-sm">
+    <tr>
+      <th scope="col">Tag:</th>
+      <td><input type="text" formControlName="tag"></td>
+    </tr>
+    <tr>
+      <th scope="col">URL</th>
+      <td><input type="text" formControlName="url"></td>
+    </tr>
+    <tr>
+      <th scope="col">Description</th>
+      <td><input type="text" formControlName="descriptions"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Cập nhật</button></td>
+    </tr>
+  </table>
+</form>
